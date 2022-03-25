@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { TypeAccountEnum, UserModel } from "models";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MenuDesktop from "./components/MenuDesktop";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MenuDesktop />} />
+        <Route
+          path="/pro-account"
+          element={
+            <MenuDesktop
+              loggedUser={
+                new UserModel(
+                  1,
+                  TypeAccountEnum.PRO_ACCOUNT,
+                  "Jhon doe",
+                  "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                )
+              }
+            />
+          }
+        />
+        <Route
+          path="/main-account"
+          element={
+            <MenuDesktop
+              loggedUser={
+                new UserModel(
+                  1,
+                  TypeAccountEnum.MAIN_ACCOUNT,
+                  "Jhon doe",
+                  "https://mdbcdn.b-cdn.net/img/new/avatars/3.webp"
+                )
+              }
+            />
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
