@@ -1,15 +1,18 @@
 # BatiReglo test React App
-+ Tailwind css & Font Awesome
-+ React Js
 
-# The Desktop Menu 
+- Tailwind 💘 css & Font Awesome
+- React Js 🔥
 
-## Default version
-    <img src="./screenShots/default.png"/>
-## Pro Account version (logged In)
-    <img src="./screenShots/pro.png" />
-## Main Account version (logged In Main Account)
-    <img src="./screenShots/main.png" />
+# The Desktop Menu
 
+## Default version 😇
 
+    ![Default](/screenShots/default.png)
 
+## Pro Account version (logged In 🙂)
+
+    ![Pro](/screenShots/pro.png)
+
+## Main Account version (logged In Main Account 😎)
+
+    ![Main](/screenShots/main.png)
