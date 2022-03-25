@@ -7,14 +7,22 @@
 
 ## Default version 😇
 
-   <p>
+<p>
   <a href="#"><img src="public/images/default.png" /></a>
 </p>
 
 ## Pro Account version (logged In 🙂)
 
-    ![Pro](/screenShots/pro.png)
+<p>
+
+<a href="#"><img src="public/images/pro.png" /></a>
+
+</p>
 
 ## Main Account version (logged In Main Account 😎)
 
-    ![Main](/screenShots/main.png)
+<p>
+
+<a href="#"><img src="public/images/main.png" /></a>
+
+</p>
