@@ -7,7 +7,7 @@
 
 ## Default version 😇
 
-    ![Default](/screenShots/default.png)
+    ![Default](./screenShots/default.png)
 
 ## Pro Account version (logged In 🙂)
 
