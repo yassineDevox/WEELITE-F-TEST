@@ -1,4 +1,4 @@
-import { TypeAccountEnum, UserModel } from "models";
+import { TypeAccountEnum, UserModel } from "@models/";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MenuDesktop from "./components/MenuDesktop";
 
@@ -11,10 +11,10 @@ export default function App() {
           path="/pro-account"
           element={
             <MenuDesktop
-              loggedUser={
+              loggedUser = {
                 new UserModel(
                   1,
-                  TypeAccountEnum.PRO_ACCOUNT,
+                  TypeAccountEnum.PRO,
                   "Jhon doe",
                   "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                 )
@@ -29,7 +29,7 @@ export default function App() {
               loggedUser={
                 new UserModel(
                   1,
-                  TypeAccountEnum.MAIN_ACCOUNT,
+                  TypeAccountEnum.MAIN,
                   "Jhon doe",
                   "https://mdbcdn.b-cdn.net/img/new/avatars/3.webp"
                 )

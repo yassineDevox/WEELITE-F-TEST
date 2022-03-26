@@ -1,4 +1,5 @@
-import { TypeAccountEnum } from "models";
+import { TypeAccountEnum } from "@models/";
+
 
 const proAccountLinks = [
   "les réglementations",
@@ -17,6 +18,6 @@ export const LINKS_DATA = {
     proAccountLinks[3],
     "faq",
   ],
-  [TypeAccountEnum.PRO_ACCOUNT]: [...proAccountLinks],
-  [TypeAccountEnum.MAIN_ACCOUNT]: ["tableau de bord", ...proAccountLinks],
+  [TypeAccountEnum.PRO]: [...proAccountLinks],
+  [TypeAccountEnum.MAIN]: ["tableau de bord", ...proAccountLinks],
 };
