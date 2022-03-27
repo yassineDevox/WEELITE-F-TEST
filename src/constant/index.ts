@@ -1,4 +1,4 @@
-import { TypeAccountEnum } from "@models/";
+import { TypeAccountEnum } from "models/";
 
 
 const proAccountLinks = [

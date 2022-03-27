@@ -1,7 +1,7 @@
 # BatiReglo test React App
 
 - Tailwind 💘 css & Font Awesome
-- React Js 🔥
+- React Js 🔯 ( TypeScript 🔥)
 
 # The Desktop Menu
 

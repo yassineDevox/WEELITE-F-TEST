@@ -1,16 +1,15 @@
 import { FC } from "react";
-import { logo } from "@assets/";
-import { TypeAccountEnum, UserModel } from "@models/";
-import { NavList, UserInfo,Default } from "@components/";
-import { isUserHasMainAccount, isUserUndefined } from "@helpers/";
-import { UserInfoProps } from "@interfaces/";
+import { logo } from "assets/";
+import { NavList, UserInfo, Default } from "components/";
+import { isHeAGuest, isUserHasMainAccount } from "helpers/";
+import { UserInfoProps } from "interfaces/";
 
-const MenuDesktop: FC<UserInfoProps> = ({user=new UserModel()}) => {
-  
+const MenuDesktop: FC<UserInfoProps> = (user) => {
+
+
   return (
     <header
-      className={`flex h-20 header-shadow ${
-        isUserHasMainAccount({user}) =
+      className={`flex h-20 header-shadow ${isUserHasMainAccount(user.typeAccount)
         ? "justify-between px-5"
         : "justify-around"
         }`}
@@ -22,17 +21,18 @@ const MenuDesktop: FC<UserInfoProps> = ({user=new UserModel()}) => {
         {/* NAVIGATION  */}
         <nav>
           <NavList
-            linksKey={
-              isUserUndefined(loggedUser) ?
-                TypeAccountEnum.DEFAULT : loggedUser.user.typeAccount
-            }
+            linksKey={user.typeAccount}
           />
         </nav>
       </div>
       {/* USER INFOS  */}
       <div className="flex gap-4 items-center">
-        {!isUserUndefined(loggedUser) ? (
-          <UserInfo  user={loggedUser.user} />
+        {!isHeAGuest(user.typeAccount) ? (
+          <UserInfo
+            typeAccount={user.typeAccount}
+            fullName={user.fullName}
+            id={user.id}
+            avatarURL={user.avatarURL} />
         ) : (
           <Default />
         )}

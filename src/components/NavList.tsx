@@ -1,8 +1,8 @@
-import { TypeAccountEnum } from "@models/";
+import { TypeAccountEnum } from "models/";
 import { FC } from "react";
-import { getLastItemIndex, isEqual } from "@helpers/";
+import { getLastItemIndex, isEqual } from "helpers/";
 import { NavItem } from "./NavItem";
-import { LINKS_DATA } from "src/constant";
+import { LINKS_DATA } from "constant/";
 
 export const NavList: FC<{ linksKey: TypeAccountEnum }> = ({ linksKey }) => {
     return (

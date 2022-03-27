@@ -1,4 +1,4 @@
-import { TypeAccountEnum } from "src/models";
+import { TypeAccountEnum } from "models/";
 
 export interface NavLinkProps {
     label: string;

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { NavLinkProps } from "@interfaces/"
+import { NavLinkProps } from "interfaces/"
 
 export const NavItem: FC<NavLinkProps> = ({ label, withIcon = false, isTheLastOne = false }) => {
   return (

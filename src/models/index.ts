@@ -6,10 +6,10 @@ export enum TypeAccountEnum {
 
 export class UserModel {
     constructor(
-        public id?: number,
-        public typeAccount?: TypeAccountEnum,
-        public fullName?: string,
-        public avatarURL?: string) {
+        public id: number=0,
+        public typeAccount: TypeAccountEnum=TypeAccountEnum.DEFAULT,
+        public fullName: string="",
+        public avatarURL: string="") {
     }
 
 }

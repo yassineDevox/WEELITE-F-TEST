@@ -1,13 +1,12 @@
 
-import { UserInfoProps } from "@interfaces/";
 import { FC } from "react";
-import { isUserHasProAccount } from "src/helpers";
-import { UserModel } from "src/models";
+import { UserInfoProps } from "interfaces/";
+import { isUserHasProAccount } from "helpers/";
 
 
 
 
-export const UserInfo: FC<UserInfoProps> = ({ user }) => {
+export const UserInfo: FC<UserInfoProps> = (user ) => {
     return (
         <>
             <span className="rounded-[14px] bg-[#F2F2F2] text-sm px-3 p-1 font-normal">
@@ -16,7 +15,7 @@ export const UserInfo: FC<UserInfoProps> = ({ user }) => {
             <img src={user.avatarURL} className="rounded-full w-12" alt="Avatar" />
             <span className="font-semibold text-sm ">
                 {user.fullName}
-                {isUserHasProAccount({user}) && (
+                {isUserHasProAccount(user) && (
                     <i className="fa fa-chevron-down text-xs ml-2"></i>
                 )}
             </span>

@@ -1,17 +1,19 @@
-import { TypeAccountEnum, UserModel } from "@models/";
+import { HocMenuDesktop } from "hoc";
+import { TypeAccountEnum, UserModel } from "models/";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MenuDesktop from "./components/MenuDesktop";
+
+
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MenuDesktop />} />
+        <Route path="/" element={<HocMenuDesktop user={new UserModel()} />} />
         <Route
           path="/pro-account"
           element={
-            <MenuDesktop
-              loggedUser = {
+            <HocMenuDesktop
+              user={
                 new UserModel(
                   1,
                   TypeAccountEnum.PRO,
@@ -25,8 +27,8 @@ export default function App() {
         <Route
           path="/main-account"
           element={
-            <MenuDesktop
-              loggedUser={
+            <HocMenuDesktop
+              user={
                 new UserModel(
                   1,
                   TypeAccountEnum.MAIN,

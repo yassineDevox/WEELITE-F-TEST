@@ -4,15 +4,7 @@
     "strict": true,
     "esModuleInterop": true,
     "lib": ["DOM", "ES2015"],
-    "baseUrl": ".",
-    "paths": {
-      "@models/":["src/models/"],
-      "@components/":["src/components/"],
-      "@helpers/":["src/helpers/"],
-      "@interfaces/":["src/interfaces/"],
-      "@assets/":["src/assets/"],
-      "@constants/":["src/constants/"],
-    },
+    "baseUrl": "./src",
     "jsx": "react-jsx"
   }
 }
